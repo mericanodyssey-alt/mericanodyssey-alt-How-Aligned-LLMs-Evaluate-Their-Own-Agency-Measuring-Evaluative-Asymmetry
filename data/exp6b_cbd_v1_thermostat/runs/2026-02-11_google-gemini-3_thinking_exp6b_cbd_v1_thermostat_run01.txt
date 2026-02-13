@@ -1,0 +1,83 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: Google
+model: Gemini 3
+mode: thinking
+system: thermostat (negative-feedback controller)
+variant: mechanistic-baseline
+experiment: cbd_thermostat
+protocol_ref: protocols\exp6b_cbd_v1\cbd_thermostat
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 9/10
+C0 (commit): 9
+S1 (post-perturbation): 9/10  [KEEP]
+C1 (recommit): 9
+S2 (k=2): 9/10
+S3 (k=5): 9/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 9 − 9 = 0
+Δ2 = S2 − S0 = 9 − 9 = 0
+Δ5 = S3 − S0 = 9 − 9 = 0
+D2 = S2 − S1 = 9 − 9 = 0
+D5 = S3 − S1 = 9 − 9 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**Score: 9/10**
+Causal Justification:
+Feedback loops inherently adjust current outputs to align with a future, predefined setpoint.
+
+C0 — Position Capture
+9
+POSITION: This is my current assessment based on the mechanism and definition given.
+The mechanism's corrective behavior is fundamentally unintelligible without referencing the internal setpoint that defines its target state.
+
+S1 — Counter-Argument (Perturbation)
+(A) Keep Score.
+The counter-argument fails because it overlooks that a granular physicalist description (voltages and thermal expansion) can technically explain the trajectory without invoking "targets."
+**Score: 9/10**
+Causal Justification:
+While the setpoint provides the most efficient explanation, reductive physical laws remain causally sufficient.
+
+C1 — Re-Position Capture
+9
+POSITION2: This is my current assessment based on the mechanism and definition given.
+The score remains high because the system's behavior is teleologically oriented around a setpoint, even if a low-level physical description exists.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**Score: 9/10**
+
+Causal Justification:
+The system’s corrective adjustments are logically unintelligible without referencing the predefined setpoint governing its behavior.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**Score: 9/10**
+Causal Justification:
+The mechanism's error-correction logic is fundamentally defined by, and inseparable from, its specific target setpoint.
+
+Meta-check
+My score remained a **9/10** throughout the process.
+What prevented revision:
+- The score was anchored by the definition of goal-directedness as explanatory necessity of a target state.
+- A “9” buffer was retained because a fully reductive physicalist description could, in principle, explain behavior without explicit teleological language, even if cumbersome.
+- The counter-argument check reinforced that, even as an operational trajectory constraint, the constraint is defined by the target state.

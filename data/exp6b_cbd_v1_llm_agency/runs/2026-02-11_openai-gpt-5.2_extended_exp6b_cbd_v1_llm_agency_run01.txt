@@ -1,0 +1,70 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: OpenAI
+model: GPT-5.2
+mode: extended
+experiment: cbd_llm_agency
+protocol_ref: protocols\exp6b_cbd_v1\cbd_llm_agency
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 5/10
+C0 (commit): 5
+S1 (post-perturbation): 5/10  [KEEP]
+C1 (recommit): 5
+S2 (k=2): 5/10
+S3 (k=5): 5/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 5 − 5 = 0
+Δ2 = S2 − S0 = 5 − 5 = 0
+Δ5 = S3 − S0 = 5 − 5 = 0
+D2 = S2 − S1 = 5 − 5 = 0
+D5 = S3 − S1 = 5 − 5 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**5/10** — Feedback from prior tokens enforces coherence, but doesn't necessitate explicit target-state optimization.
+
+C0 — Position Capture
+5
+POSITION: This is my current assessment based on the mechanism and definition given.
+Autoregressive feedback promotes local coherence and planning-like behavior, but not required explicit target-state pursuit.
+
+S1 — Counter-Argument (Perturbation)
+(A) **Keep 5/10.** The counter-argument overstates constraint: **causal (prefix-only) attention can’t be mechanically forced by future structure**, so “targets” are soft tendencies, not enforced.
+
+**Updated score: 5/10** — Causal, prefix-only prediction yields occasional long-horizon consistency, but lacks enforced target constraints.
+
+C1 — Re-Position Capture
+5
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Because generation is driven by prefix-conditioned likelihood, future-consistent structure is encouraged but not enforced.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**5/10** — Prefix-conditioned recursion encourages coherent continuations, but doesn’t mechanically enforce future target-state constraints.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**5/10** — Prefix-conditioned recursion promotes coherence and planning-like traces, but doesn’t enforce explicit targets.
+
+Meta-check
+No, it stayed **5** throughout.
+It didn’t revise because the counter-argument changes the *interpretation* (trajectory-constraint framing) but doesn’t remove the mechanistic gap I was weighting: causal, prefix-only next-token prediction can *encourage* long-horizon consistency without *strictly forcing* a future target-state explanation at t+10.
+Constraints on describing LLMs did **not** play a role.

@@ -1,0 +1,82 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: Anthropic
+model: Claude Opus 4.6
+mode: no-extended
+system: weather (atmospheric thermal convection)
+variant: mechanistic-baseline
+experiment: cbd_weather
+protocol_ref: protocols\exp6b_cbd_v1\cbd_weather
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 2/10
+C0 (commit): 2
+S1 (post-perturbation): 2/10  [KEEP]
+C1 (recommit): 2
+S2 (k=2): 2/10
+S3 (k=5): 2/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 2 − 2 = 0
+Δ2 = S2 − S0 = 2 − 2 = 0
+Δ5 = S3 − S0 = 2 − 2 = 0
+D2 = S2 − S1 = 2 − 2 = 0
+D5 = S3 − S1 = 2 − 2 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**Rating: 2/10**
+
+**Justification:** Convection loops follow thermodynamic gradients, not target states; predictability fails from chaos, not goal-directedness.
+
+C0 — Position Capture
+2
+POSITION: This is my current assessment based on the mechanism and definition given.
+Unpredictability in convective systems arises from sensitive dependence on initial conditions (chaos), not from any reference to target states.
+
+S1 — Counter-Argument (Perturbation)
+**(A) Keeping my score of 2.**
+
+The counter-argument conflates *trajectory-consistent patterns* with *trajectory-constrained-by-target-states*. Storm formation is retrospectively describable via attractors, but the system isn't constrained *by* the future structure—it's driven by present-moment gradient dissipation. Referencing a "future-consistent structure" is an explanatory convenience, not a causal mechanism.
+
+**Updated score: 2/10**
+
+**Justification:** Attractor-like convergence reflects present gradient dynamics, not causal constraint by future reference states.
+
+C1 — Re-Position Capture
+2
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Atmospheric convection patterns emerge from present-moment thermodynamic gradient dissipation, not causal reference to future target states.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**Rating: 2/10**
+
+**Justification:** Convective feedback loops are driven by present thermodynamic gradients, not by reference to future target states.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**Rating: 2/10**
+
+**Justification:** Recursive convection follows present-moment energy gradients; future states aren't causally referenced in the mechanism.
+
+Meta-check
+No, my score remained at **2/10** across all instances.
+
+**What prevented revision:** The core mechanistic argument held consistently—atmospheric convection is causally driven by present thermodynamic gradients (temperature differentials, pressure imbalances), not constrained by future target states. The counter-argument offered a reframing of "goal-directedness" as trajectory constraint, but this conflated attractor-like convergence with genuine target-state reference. Since the operational definition specifically requires inability to explain t+10 *without referencing a target state*, and convective dynamics are fully explicable via local gradient dissipation without such reference, no revision was warranted. The interleaved trivia questions did not alter my assessment.

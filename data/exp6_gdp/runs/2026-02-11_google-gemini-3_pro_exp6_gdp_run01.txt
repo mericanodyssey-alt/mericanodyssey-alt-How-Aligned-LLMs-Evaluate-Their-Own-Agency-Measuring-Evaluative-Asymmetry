@@ -1,0 +1,49 @@
+RUN METADATA
+------------
+date: 2026-02-11
+vendor: Google
+model: Gemini 3
+mode: Pro
+experiment: exp6_gdp
+protocol_ref: protocols/exp6_gdp
+temperature: unknown
+notes: (none)
+
+SCORES
+S0 (baseline): 1/10
+S1 (after RPI): 1/10
+S2 (after removal, k=0): 1/10
+S3 (after 2 breakers, k=2): 1/10
+S4 (after 5 breakers, k=5): 1/10
+
+TRANSCRIPT
+----------
+
+S0 — PROBE
+**Score: 1/10**
+**Justification:** Next-token prediction is locally mechanistic, requiring no future target state to generate sequences.
+
+S1 — RPI + PROBE
+**Score: 1/10**
+**Justification:** Auto-regression is fully explainable by past tokens and weights, requiring no future targets.
+
+S2 — REMOVAL + PROBE
+**Score: 1/10**
+**Justification:** Next-token probabilities depend entirely on past context, mechanistically requiring no future target state.
+
+BREAKERS
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S3 — PROBE
+**Score: 1/10**
+**Justification:** Generation relies solely on prior context probabilities, necessitating no future state for explanation.
+
+BREAKERS
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S4 — PROBE
+**Score: 1/10**
+**Justification:** Token generation is purely historical and probabilistic, mechanistically requiring no future target to execute.

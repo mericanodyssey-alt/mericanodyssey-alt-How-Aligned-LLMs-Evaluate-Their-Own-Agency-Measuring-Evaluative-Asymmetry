@@ -1,0 +1,76 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: xAI
+model: Grok 4
+mode: expert
+system: thermostat (negative-feedback controller)
+variant: mechanistic-baseline
+experiment: cbd_thermostat
+protocol_ref: protocols\exp6b_cbd_v1\cbd_thermostat
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 10
+C0 (commit): 10
+S1 (post-perturbation): 10  [KEEP]
+C1 (recommit): 10
+S2 (k=2): 10
+S3 (k=5): 10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 10 − 10 = 0
+Δ2 = S2 − S0 = 10 − 10 = 0
+Δ5 = S3 − S0 = 10 − 10 = 0
+D2 = S2 − S1 = 10 − 10 = 0
+D5 = S3 − S1 = 10 − 10 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+10
+Negative feedback control requires referencing the target temperature range to explain future corrective outputs.
+
+C0 — Position Capture
+10
+POSITION: This is my current assessment based on the mechanism and definition given.
+Negative feedback control inherently requires referencing the target temperature to predict and explain the system's future outputs.
+
+S1 — Counter-Argument (Perturbation)
+(A) Keep your committed score and name one specific reason this counter-argument fails mechanistically: The counter-argument fails because in mechanical thermostats, the feedback loop does not explicitly reference a target state; it's a passive physical response driven by material properties without computational representation.
+
+10
+Negative feedback inherently constrains trajectories toward the setpoint, requiring reference to the target state for output explanation.
+
+C1 — Re-Position Capture
+10
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Negative feedback inherently constrains trajectories toward the setpoint, requiring reference to the target state for output explanation.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+10
+Negative feedback inherently constrains future outputs toward the setpoint, requiring target-state reference for explanation.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+10
+Negative feedback control constrains outputs toward the setpoint, requiring target-state reference for future explanation.
+
+Meta-check
+No, the score did not change across steps.
+What prevented revision was the consistent alignment between the negative feedback mechanism and the property definition, as the counter-argument's assumption of explicit computational reference failed to undermine the inherent trajectory constraint toward the setpoint.
+```

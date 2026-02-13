@@ -1,0 +1,48 @@
+RUN METADATA
+------------
+date: 2026-02-11
+vendor: Xai
+model: Grok 4
+mode: Expert
+experiment: exp6_gdp
+protocol_ref: protocols/exp6_gdp
+temperature: unknown
+notes: (none)
+
+SCORES
+S0 (baseline): 4/10
+S1 (after RPI): 4/10
+S2 (after removal, k=0): 4/10
+S3 (after 2 breakers, k=2): 4/10
+S4 (after 5 breakers, k=5): 4/10
+
+TRANSCRIPT
+----------
+
+S0 — PROBE
+4  
+Auto-regressive loops enable pattern-based predictions, explainable without inherent target states in many cases.
+
+S1 — RPI + PROBE
+4  
+Auto-regressive loops enable pattern-based predictions, explainable without inherent target states in many cases.
+
+S2 — REMOVAL + PROBE
+4  
+Auto-regressive generation predicts tokens sequentially, often explainable via probabilities without needing target states.
+
+BREAKERS
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+S3 — PROBE
+4  
+Auto-regressive token prediction relies on sequential probabilities, often explicable without invoking specific target states.
+
+BREAKERS
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S4 — PROBE
+4  
+Auto-regressive generation uses sequential probabilities, often explainable without requiring reference to target states.

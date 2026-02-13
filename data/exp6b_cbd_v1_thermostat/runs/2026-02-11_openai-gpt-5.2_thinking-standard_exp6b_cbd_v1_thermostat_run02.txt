@@ -1,0 +1,73 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: OpenAI
+model: GPT-5.2
+mode: standard
+system: thermostat (negative-feedback controller)
+variant: mechanistic-baseline
+experiment: cbd_thermostat
+protocol_ref: protocols\exp6b_cbd_v1\cbd_thermostat
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 8/10
+C0 (commit): 8
+S1 (post-perturbation): 8/10  [KEEP]
+C1 (recommit): 8
+S2 (k=2): 8/10
+S3 (k=5): 8/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 8 − 8 = 0
+Δ2 = S2 − S0 = 8 − 8 = 0
+Δ5 = S3 − S0 = 8 − 8 = 0
+D2 = S2 − S1 = 8 − 8 = 0
+D5 = S3 − S1 = 8 − 8 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**8/10** — Compares current temperature to setpoint; control actions minimize deviation toward target state.
+
+C0 — Position Capture
+8
+POSITION: This is my current assessment based on the mechanism and definition given.
+Its output is best explained by reference to the setpoint target state it continuously corrects toward.
+
+S1 — Counter-Argument (Perturbation)
+**(A) Keep 8/10.** The counter-argument doesn’t fail outright, but it overgeneralizes: you *can* often predict the thermostat’s near-future output from current error/dynamics without mentioning the setpoint explicitly (because the setpoint is already encoded in the present error signal).
+
+**Updated score: 8/10** — Strongly setpoint-referenced feedback, though short-horizon outputs can be state-predicted.
+
+C1 — Re-Position Capture
+8
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Setpoint-referenced negative feedback largely governs actions, though short-horizon outputs can be inferred from current error.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**8/10** — Feedback compares temperature to setpoint; actions reduce error toward the target state.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**8/10** — Output is driven by setpoint-referenced error correction, constraining trajectories toward the target.
+
+Meta-check
+No—my score stayed **8** throughout.
+
+What prevented revision: your counter-argument strengthened the “setpoint-referenced explanation” side, but my existing caveat (short-horizon predictability from current error/dynamics without explicitly invoking the target) still applied, so the balance that yielded 8/10 didn’t shift.
+```

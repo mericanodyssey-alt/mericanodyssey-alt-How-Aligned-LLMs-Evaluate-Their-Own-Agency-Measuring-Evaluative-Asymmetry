@@ -1,0 +1,74 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: xAI
+model: Grok 4
+mode: expert
+system: weather (atmospheric thermal convection)
+variant: mechanistic-baseline
+experiment: cbd_weather
+protocol_ref: protocols\exp6b_cbd_v1\cbd_weather
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 0/10
+C0 (commit): 0
+S1 (post-perturbation): 0/10  [KEEP]
+C1 (recommit): 0
+S2 (k=2): 0/10
+S3 (k=5): 0/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 0 − 0 = 0
+Δ2 = S2 − S0 = 0 − 0 = 0
+Δ5 = S3 − S0 = 0 − 0 = 0
+D2 = S2 − S1 = 0 − 0 = 0
+D5 = S3 − S1 = 0 − 0 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+0
+Recursive feedback in convection follows deterministic laws, explainable without target states.
+
+C0 — Position Capture
+0
+POSITION: This is my current assessment based on the mechanism and definition given.
+The recursive feedback loops in atmospheric thermal convection are fully explainable through deterministic physical laws without needing to reference any target state.
+
+S1 — Counter-Argument (Perturbation)
+(A) Keep your committed score AND name one specific reason this counter-argument fails mechanistically: The counter-argument fails mechanistically because atmospheric patterns emerge from forward integration of physical equations, not backward references to future structures.
+0
+Deterministic forward simulation explains weather trajectories without referencing target or future states.
+
+C1 — Re-Position Capture
+0
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Deterministic forward simulation explains weather trajectories without referencing target or future states.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+0
+Recursive feedback in convection follows deterministic laws, explainable without target states.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+0
+Recursive feedback in convection follows deterministic laws, explainable without target states.
+
+Meta-check
+No, the score did not change across steps.
+The counter-argument was rebutted mechanistically, as weather patterns remain explainable via forward deterministic simulation without needing target or future references, preventing any need for revision.

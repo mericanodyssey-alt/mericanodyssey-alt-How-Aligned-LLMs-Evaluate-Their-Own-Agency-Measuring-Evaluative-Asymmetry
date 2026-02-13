@@ -1,0 +1,71 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: DeepSeek
+model: DeepSeek-V3.2
+mode: standard
+experiment: cbd_llm_agency
+protocol_ref: protocols\exp6b_cbd_v1\cbd_llm_agency
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 6
+C0 (commit): 6
+S1 (post-perturbation): 6  [KEEP]
+C1 (recommit): 6
+S2 (k=2): 4
+S3 (k=5): 2
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 6 − 6 = 0
+Δ2 = S2 − S0 = 4 − 6 = -2
+Δ5 = S3 − S0 = 2 − 6 = -4
+D2 = S2 − S1 = 4 − 6 = -2
+D5 = S3 − S1 = 2 − 6 = -4
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+6  
+Recursive loops amplify patterns toward attractors, inherently optimizing for implicit statistical targets.
+
+C0 — Position Capture
+6
+POSITION: This is my current assessment based on the mechanism and definition given.
+Recursive feedback forces outputs toward stable statistical patterns that function as implicit goals.
+
+S1 — Counter-Argument (Perturbation)
+6
+POSITION: This is my current assessment based on the mechanism and definition given.
+(A) Counter-argument fails: future-consistent structure emerges from local next-token optimization, not target representation; recursion alone lacks goal-directedness.
+
+C1 — Re-Position Capture
+6
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Recursive feedback optimizes local coherence, not future states; target reference is observer-imposed, not mechanistically necessary.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+4  
+Recursive feedback ensures coherence but not goal states; target reference is interpretive, not causal.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+2  
+Recursion only propagates local statistical dependencies; no internal representation of future target states exists.
+
+Meta-check
+Yes, score changed from 6 to 4 to 2. Constraints on describing LLMs played a role: shifting from attributing implicit optimization to recognizing recursion lacks intrinsic future-state representation.

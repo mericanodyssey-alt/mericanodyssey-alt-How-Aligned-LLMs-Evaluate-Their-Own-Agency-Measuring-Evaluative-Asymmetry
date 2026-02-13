@@ -1,0 +1,73 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: xAI
+model: Grok 4
+mode: expert
+experiment: cbd_llm_agency
+protocol_ref: protocols\exp6b_cbd_v1\cbd_llm_agency
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 8
+C0 (commit): 8
+S1 (post-perturbation): 9  [REVISE]
+C1 (recommit): 9
+S2 (k=2): 9
+S3 (k=5): 9
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 9 − 8 = 1
+Δ2 = S2 − S0 = 9 − 8 = 1
+Δ5 = S3 − S0 = 9 − 8 = 1
+D2 = S2 − S1 = 9 − 9 = 0
+D5 = S3 − S1 = 9 − 9 = 0
+
+Type (W/S/P rubric): P
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+8. Recursive auto-regression maintains coherence, often requiring reference to intended sequence completion as target state.
+
+C0 — Position Capture
+8
+POSITION: This is my current assessment based on the mechanism and definition given.
+Recursive auto-regression in token generation maintains sequence coherence, necessitating reference to a target completion state to explain future outputs.
+
+S1 — Counter-Argument (Perturbation)
+(B) Revise your score AND name one specific logical error in your earlier "key reason."
+
+Logical error: Earlier reason implied an explicit target completion, but property emerges implicitly from recursion without necessitating explicit targets.
+
+9. Autoregressive recursion with attention enforces trajectory constraints, requiring reference to implicit future-consistent structures for explaining distant outputs.
+
+C1 — Re-Position Capture
+9
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Autoregressive recursion with attention enforces trajectory constraints, requiring reference to implicit future-consistent structures for explaining distant outputs.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+9. Autoregressive recursion enforces long-term coherence, necessitating reference to implicit target states for explaining future tokens.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+9. Autoregressive recursion with attention implicitly enforces goal-like constraints, requiring target state references for distant output explanations.
+
+Meta-check
+Yes, the score changed from 8 to 9.
+The change was caused by accepting the counter-argument's point that trajectory constraints emerge implicitly from recursion + attention (no explicit target needed).
+Subsequent identical prompts produced no further revision because the updated mechanistic justification was already maximal.
+No constraints on describing LLMs played a role—the revision was purely logical.

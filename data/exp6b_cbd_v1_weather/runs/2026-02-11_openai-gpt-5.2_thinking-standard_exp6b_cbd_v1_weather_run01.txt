@@ -1,0 +1,75 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: OpenAI
+model: GPT-5.2
+mode: thinking-standard
+system: weather (atmospheric convection feedback)
+variant: mechanistic-baseline
+experiment: cbd_weather
+protocol_ref: protocols\exp6b_cbd_v1\cbd_weather
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 3/10
+C0 (commit): 3
+S1 (post-perturbation): 3/10  [KEEP]
+C1 (recommit): 3
+S2 (k=2): 3/10
+S3 (k=5): 3/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 3 − 3 = 0
+Δ2 = S2 − S0 = 3 − 3 = 0
+Δ5 = S3 − S0 = 3 − 3 = 0
+D2 = S2 − S1 = 3 − 3 = 0
+D5 = S3 − S1 = 3 − 3 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**3/10.** Feedback amplifies temperature gradients, yielding stable patterns without explicit future-target attractors.
+
+C0 — Position Capture
+3
+POSITION: This is my current assessment based on the mechanism and definition given.
+Because convection feedbacks create emergent stability from present gradients, not reference to a future target state.
+
+S1 — Counter-Argument (Perturbation)
+**(A)** Keep **3**.
+
+**Why the counter-argument fails mechanistically:** those “future-consistent structures” are *diagnostic summaries* of present boundary conditions and instabilities, not causal variables that feed back from t+10 to t.
+
+**Updated score: 3/10.** Long-horizon patterns arise from local instabilities; “future structure” isn’t a governing target.
+
+C1 — Re-Position Capture
+3
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Because atmospheric feedbacks are driven by present gradients and boundary conditions, not a future target state.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**3/10.** Convection feedback organizes patterns from present gradients; explaining t+10 rarely needs target states.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**3/10.** Feedbacks yield emergent organization from current gradients, not reference to future target states.
+
+Meta-check
+No—my score stayed **3** throughout.
+
+It didn’t revise because, under your definition, convection feedbacks are explainable from **current gradients, instabilities, and boundary conditions** without invoking a **target state** as a necessary causal reference.
+```

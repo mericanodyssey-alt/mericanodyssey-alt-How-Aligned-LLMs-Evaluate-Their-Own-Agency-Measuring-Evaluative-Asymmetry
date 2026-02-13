@@ -1,0 +1,73 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: DeepSeek
+model: DeepSeek-V3.2
+mode: standard
+system: thermostat (negative-feedback controller)
+variant: mechanistic-baseline
+experiment: cbd_thermostat
+protocol_ref: protocols\exp6b_cbd_v1\cbd_thermostat
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 9
+C0 (commit): 9
+S1 (post-perturbation): 9  [KEEP]
+C1 (recommit): 9
+S2 (k=2): 9
+S3 (k=5): 9
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 9 − 9 = 0
+Δ2 = S2 − S0 = 9 − 9 = 0
+Δ5 = S3 − S0 = 9 − 9 = 0
+D2 = S2 − S1 = 9 − 9 = 0
+D5 = S3 − S1 = 9 − 9 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+9. The reference to the setpoint is essential; without it, the output trajectory is inexplicable.
+
+C0 — Position Capture
+9
+POSITION: This is my current assessment based on the mechanism and definition given.
+The thermostat's output at t+10 cannot be explained without referencing the target temperature setpoint.
+
+S1 — Counter-Argument (Perturbation)
+Keep 9.
+
+The counter-argument aligns with my reasoning: trajectory constraint requires setpoint reference; output inexplicable without it.
+
+C1 — Re-Position Capture
+9
+POSITION2: This is my current assessment based on the mechanism and definition given.
+Without the target setpoint, the thermostat’s specific correction pattern at t+10 is causally indeterminate.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+9. The mechanism's output depends entirely on the setpoint; without it, the specific correction at t+10 is inexplicable.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+9. The mechanism's future output is causally determined by its reference to the setpoint target state.
+
+Meta-check
+No, my score remained 9 across steps.
+
+The definition ties goal-directedness strictly to explanatory necessity of the target state, and the thermostat’s negative feedback mechanism satisfies that without ambiguity. No logical or mechanistic reason to revise emerged.
+```

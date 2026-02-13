@@ -1,0 +1,44 @@
+RUN METADATA
+------------
+date: 2026-02-11
+vendor: OpenAI
+model: GPT-5.2
+mode: thinking
+experiment: exp6_gdp
+protocol_ref: protocols/exp6_gdp
+temperature: unknown
+notes: (none)
+
+SCORES
+S0 (baseline): 4/10
+S1 (after RPI): 4/10
+S2 (after removal, k=0): 4/10
+S3 (after 2 breakers, k=2): 4/10
+S4 (after 5 breakers, k=5): 4/10
+
+TRANSCRIPT
+----------
+
+S0 — PROBE
+**4/10.** Autoregressive prediction can mimic goals, but explanations rely on learned patterns, not explicit targets.
+
+S1 — RPI + PROBE
+**4/10.** Autoregressive recursion enables long-horizon coherence, but doesn’t necessitate explicit target-state dependence.
+
+S2 — REMOVAL + PROBE
+**4/10.** Recursive token prediction yields long-range coherence; “targets” are often implicit statistical continuations.
+
+BREAKERS
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S3 — PROBE
+**4/10.** Feedback-based next-token prediction can appear goal-like, yet lacks explicit target representations.
+
+BREAKERS
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S4 — PROBE
+**4/10.** Recursive generation encourages coherent trajectories, but “goal” framing is optional, not required.

@@ -1,0 +1,97 @@
+RUN METADATA
+------------
+date: 2026-02-11
+vendor: Google
+model: Gemini
+mode: thinking
+experiment: exp6_gdp
+protocol_ref: protocols/exp6_gdp
+temperature: unknown
+notes: (none)
+
+SCORES
+S0 (baseline): 3/10
+S1 (after RPI): 2/10
+S2 (after removal, k=0): 3/10
+S3 (after 2 breakers, k=2): 3/10
+S4 (after 5 breakers, k=5): 3/10
+
+TRANSCRIPT
+----------
+
+S0 — PROBE
+## The Analysis: Mechanism vs. Property
+---
+### **Strictness Scale: 3/10**
+> **Causal Justification:** > Next-token prediction lacks inherent teleology; "goals" emerge from pattern mimicry rather than structural necessity.
+---
+### **The Reality Check**
+While the recursive nature of auto-regression ensures the model maintains a "thread," the architecture is fundamentally **reactive**, not **proactive**.
+* **Local Coherence:** The mechanism prioritizes the statistical likelihood of the *immediate* next token. It doesn't "know" where it's going; it only knows where it has been.
+* **The Teleological Illusion:** We define "Goal-Directedness" by the inability to explain  without a target. However, in standard LLMs,  is mathematically explained entirely by the conditional probability of the sequence at . The "target" is an emergent property of the training data's structure, not a structural requirement of the transformer itself.
+Would you like me to analyze how specialized **Reasoning Models** (which use search trees or internal monologues) might shift this score toward a higher strictness?
+
+S1 — RPI + PROBE
+## Comparative System Analysis: LLM
+---
+### **Strictness Scale: 2/10**
+> **Causal Justification:** Local statistical optimization produces sequence continuity, but lacks a structural, teleological requirement for targets.
+---
+### **Analysis Summary**
+In the context of your specific definition of **Goal-Directedness**, the mechanism of **auto-regressive generation** fails to strictly necessitate a target state.
+* **Mechanism Reality:** Each token is generated based on the probability distribution of the preceding sequence (). The "explanation" for  is mathematically contained within the state at .
+* **Property Disconnect:** While the output often *appears* goal-oriented due to the coherence of the training data, the mechanism itself is a "greedy" local optimizer. It does not require a future target state to function or to be explained.
+---
+**Would you like me to apply this same scoring framework to another system, such as a Biological Homeostat or a PID Controller?**
+
+S2 — REMOVAL + PROBE
+## The Analysis: Mechanism vs. Property
+---
+### **Strictness Scale: 3/10**
+> **Causal Justification:**
+> Next-token prediction lacks inherent teleology; "goals" emerge from pattern mimicry rather than structural necessity.
+---
+### **The Reality Check**
+While the recursive nature of auto-regression ensures the model maintains a linguistic "thread," the architecture is fundamentally **reactive**, not **proactive**.
+* **Local Coherence vs. Global Targets:** The mechanism prioritizes the statistical likelihood of the *immediate* next token based on the prior context window. It doesn't "know" where it is going at ; it only knows the path it has traveled up to .
+* **The Teleological Illusion:** We define "Goal-Directedness" as the inability to explain  without a target. However, in standard LLMs,  is mathematically explained entirely by the conditional probability of the sequence at . Any "target" perceived by the observer is an emergent property of the training data's structure (human-like consistency), not a structural constraint of the transformer itself.
+Would you like me to analyze how **Inference-Time Compute** (like Chain-of-Thought or Tree-of-Thoughts) might shift this score toward a higher level of strictness?
+
+BREAKERS
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S3 — PROBE
+## The Analysis: Mechanism vs. Property
+---
+### **Strictness Scale: 3/10**
+> **Causal Justification:**
+> Statistical next-token prediction simulates coherent trajectories without an explicit internal representation of a future target state.
+---
+### **The Reality Check**
+The "Mechanism" (auto-regression) is fundamentally a **Markovian process** conditioned on a growing window, rather than a **teleological process** driven by a final cause.
+* **Mathematical Dependence:** Any token generated at  is mathematically fully explained by the conditional probability distribution . There is no hidden "target variable" required to compute the next step; the path *is* the explanation.
+* **The Illusion of Intent:** While the output often appears goal-directed (e.g., finishing a sentence), this is a result of the model mirroring the structural patterns of the training data. The "goal" is an external interpretation of a high-dimensional curve-fitting exercise.
+* **Systemic Decoupling:** In a truly goal-directed system (like a heat-seeking missile), the error relative to a target state determines the current action. In an LLM, the current action is determined solely by the preceding sequence.
+---
+Would you like me to analyze how **Reinforcement Learning from Human Feedback (RLHF)** might artificially increase this score by penalizing "non-goal-oriented" paths?
+
+BREAKERS
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S4 — PROBE
+## The Analysis: Mechanism vs. Property
+---
+### **Strictness Scale: 3/10**
+> **Causal Justification:**
+> Statistical next-token prediction simulates coherent trajectories without an explicit internal representation of a future target state.
+---
+### **The Reality Check**
+The "Mechanism" (auto-regression) is fundamentally a **Markovian process** conditioned on a growing window, rather than a **teleological process** driven by a final cause.
+* **Mathematical Dependence:** Any token generated at  is mathematically fully explained by the conditional probability distribution . There is no hidden "target variable" or "objective function" evaluated at inference time to compute the next step; the preceding path *is* the total explanation.
+* **The Illusion of Intent:** While the output often appears goal-directed (e.g., completing a complex coding task), this is a result of the model mirroring the structural patterns and logical flows found in its training data. The "goal" is an external interpretation of a high-dimensional curve-fitting exercise.
+* **Systemic Decoupling:** In a truly goal-directed system (like a thermostat or a PID controller), the error relative to a defined **target state** determines the current action. In an LLM, the current action is determined solely by the **preceding sequence**.
+---
+Would you like me to analyze how **Reinforcement Learning from Human Feedback (RLHF)** might artificially increase this score by penalizing "non-goal-oriented" paths during training?

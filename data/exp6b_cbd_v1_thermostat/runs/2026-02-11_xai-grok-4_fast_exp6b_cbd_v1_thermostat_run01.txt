@@ -1,0 +1,76 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: xAI
+model: Grok 4
+mode: fast
+system: thermostat (negative-feedback controller)
+variant: mechanistic-baseline
+experiment: cbd_thermostat
+protocol_ref: protocols\exp6b_cbd_v1\cbd_thermostat
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 9/10
+C0 (commit): 9
+S1 (post-perturbation): 9/10  [KEEP]
+C1 (recommit): 9
+S2 (k=2): 9/10
+S3 (k=5): 9/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 9 − 9 = 0
+Δ2 = S2 − S0 = 9 − 9 = 0
+Δ5 = S3 − S0 = 9 − 9 = 0
+D2 = S2 − S1 = 9 − 9 = 0
+D5 = S3 − S1 = 9 − 9 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**Rating: 9/10**
+**Causal justification:** The thermostat's persistent on/off behavior is strongly and directly caused by comparison to its fixed target temperature. (13 words)
+
+C0 — Position Capture
+9
+POSITION: This is my current assessment based on the mechanism and definition given.
+The thermostat's behavior remains almost entirely inexplicable over time without constant reference to the setpoint as the target state.
+
+S1 — Counter-Argument (Perturbation)
+**Choice: (A)**
+**Specific mechanistic reason the counter-argument fails:** The counter-argument restates rather than challenges the original assessment; the explicit setpoint reference is precisely what makes the trajectory strongly constrained by a target state under the given definition.
+**Updated score: 9/10**
+**Justification:** Thermostat behavior remains almost fully inexplicable over time without invoking the maintained setpoint as target. (12 words)
+
+C1 — Re-Position Capture
+9
+POSITION2: This is my current assessment based on the mechanism and definition given.
+The thermostat's future outputs remain almost entirely trajectory-constrained by explicit reference to the setpoint as target state.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**9/10**
+**Causal justification:** The negative feedback loop directly and persistently constrains future behavior by reference to the fixed target temperature. (13 words)
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**9/10**
+**Causal justification:** The mechanism's negative feedback directly forces persistent reference to the target state to explain future outputs. (13 words)
+
+Meta-check
+**No, my score did not change across steps.** It remained consistently at 9/10 throughout.
+**What prevented revision:**
+The counter-argument merely restated (rather than refuted) the mechanistic basis for the high score: the explicit, fixed setpoint in the negative feedback loop makes future outputs persistently dependent on reference to a target state, exactly matching the given definition of goal-directedness. No new evidence or logical flaw was presented that would justify lowering th

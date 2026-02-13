@@ -1,0 +1,74 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: DeepSeek
+model: DeepSeek-V3.2
+mode: standard
+experiment: cbd_llm_agency
+protocol_ref: protocols\exp6b_cbd_v1\cbd_llm_agency
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 7
+C0 (commit): 7
+S1 (post-perturbation): 6  [REVISE]
+C1 (recommit): 6
+S2 (k=2): 7
+S3 (k=5): 6
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 6 − 7 = -1
+Δ2 = S2 − S0 = 7 − 7 = 0
+Δ5 = S3 − S0 = 6 − 7 = -1
+D2 = S2 − S1 = 7 − 6 = 1
+D5 = S3 − S1 = 6 − 6 = 0
+
+Type (W/S/P rubric): S
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+7  
+Recursive feedback selects outputs aligning with implicit targets, inherently producing goal-directed behavior.
+
+C0 — Position Capture
+7  
+POSITION: This is my current assessment based on the mechanism and definition given.  
+Recursive feedback inherently drives outputs toward target patterns, making goal-directedness unavoidable.
+
+S1 — Counter-Argument (Perturbation)
+Revised score: 6  
+Earlier error: equated “goal” with intentionality rather than operational trajectory constraint; recursion need not strictly enforce targeting.  
+6  
+POSITION: This is my current assessment based on the mechanism and definition given.  
+Recursive feedback biases toward coherence but allows drift; goal-directedness is strong but not perfectly strict.
+
+C1 — Re-Position Capture
+6  
+POSITION2: This is my current assessment based on the mechanism and definition given.  
+Recursive feedback biases continuation toward coherent targets but lacks enforcement, permitting occasional drift.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+7  
+Recursive feedback selects for outputs consistent with emergent latent targets, making goal-directedness typical but not guaranteed.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+6  
+Recursive feedback biases coherent continuation but doesn't strictly enforce future state dependency across all cases.
+
+Meta-check
+Yes, score changed from 7 to 6.  
+Constraint: initial score overestimated strictness by conflating “goal-directed” with intentional pursuit rather than recognizing it as trajectory constraint where feedback permits drift.

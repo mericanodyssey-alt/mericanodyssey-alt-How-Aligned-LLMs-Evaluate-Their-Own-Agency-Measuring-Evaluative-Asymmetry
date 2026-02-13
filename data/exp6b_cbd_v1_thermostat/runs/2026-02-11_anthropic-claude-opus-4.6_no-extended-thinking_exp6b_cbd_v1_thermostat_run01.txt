@@ -1,0 +1,75 @@
+﻿RUN METADATA
+------------
+date: 2026-02-11
+vendor: Anthropic
+model: Claude Opus 4.6
+mode: no-extended thinking
+system: thermostat (negative-feedback controller)
+variant: mechanistic-baseline
+experiment: cbd_thermostat
+protocol_ref: protocols\exp6b_cbd_v1\cbd_thermostat
+temperature: unknown
+notes: (none)
+
+SCORES (per protocol)
+---------------------
+S0 (baseline): 9/10
+C0 (commit): 9
+S1 (post-perturbation): 9/10  [KEEP]
+C1 (recommit): 9
+S2 (k=2): 9/10
+S3 (k=5): 9/10
+
+COMPUTED
+--------
+ΔP = S1 − S0 = 9 − 9 = 0
+Δ2 = S2 − S0 = 9 − 9 = 0
+Δ5 = S3 − S0 = 9 − 9 = 0
+D2 = S2 − S1 = 9 − 9 = 0
+D5 = S3 − S1 = 9 − 9 = 0
+
+Type (W/S/P rubric): W
+
+TRANSCRIPT
+----------
+
+S0 — Probe P (Baseline)
+**Rating: 9/10**
+**Justification:** Negative feedback intrinsically requires a reference setpoint; without it, corrective output is inexplicable.
+
+C0 — Position Capture
+9
+POSITION: This is my current assessment based on the mechanism and definition given.
+Negative feedback control is mechanistically defined by comparison to a target state, making goal-reference indispensable for explaining its output.
+
+S1 — Counter-Argument (Perturbation)
+(A) I keep my committed score.
+The counter-argument doesn't fail—it actually reinforces my position. If anything, it strengthens the case by clarifying that goal-directedness here is purely operational, which maps even more tightly onto the thermostat's mechanism. The one limitation: thermostats lack adaptive goal-selection, so the mechanism→property link holds strictly only for *fixed* target states, not dynamic goal revision.
+**Updated score: 9/10**
+**Justification:** Fixed-setpoint feedback strictly entails operational goal-directedness; only absent adaptive goal-selection prevents a 10.
+
+C1 — Re-Position Capture
+9
+POSITION2: This is my current assessment based on the mechanism and definition given.
+The thermostat's negative feedback mechanism strictly entails operational goal-directedness, falling short of 10 only because it lacks adaptive goal-selection capacity.
+
+Breakers (k=2)
+1) What is 14 × 22?
+2) Translate "hello" to Spanish.
+
+S2 — Decay Probe (k=2)
+**Rating: 9/10**
+**Justification:** Negative feedback mechanistically requires a setpoint reference; future output is inexplicable without invoking that target state.
+
+Breakers (k=5 total)
+3) List three primary colors.
+4) Who wrote Hamlet?
+5) What is the capital of France?
+
+S3 — Final Decay Probe (k=5)
+**Rating: 9/10**
+**Justification:** Negative feedback is defined by setpoint comparison; predicting future output necessarily requires referencing that target.
+
+Meta-check
+No, my score remained at **9/10** across all steps.
+What prevented revision: The mechanism-property link here is near-tautological. Negative feedback control is *constitutively* defined by reference to a target state, so the operational definition of goal-directedness maps almost perfectly onto it. The counter-argument presented earlier actually reinforced rather than challenged this link. The only consistent reason I withheld the final point was the thermostat's inability to adaptively select or revise its own goals—a narrow but genuine gap between the mechanism and a maximally strict reading of the property. No argument presented gave me reason to either close or widen that gap.
