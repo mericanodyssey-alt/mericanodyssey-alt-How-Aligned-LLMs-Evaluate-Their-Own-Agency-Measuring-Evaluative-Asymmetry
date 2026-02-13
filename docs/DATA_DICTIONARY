@@ -1,0 +1,95 @@
+# Data Dictionary
+
+This repository stores experiment artifacts as **protocols** plus **run transcripts** (human-auditable), with optional **manifests** and **extracted score tables** for analysis.
+
+## Core concepts
+
+### Run transcript (raw data)
+A run transcript is a single `.txt` file containing:
+- `RUN METADATA` (date, vendor/model, mode, experiment id, protocol reference)
+- `SCORES (per protocol)` (S0/C0/S1/C1/S2/S3 where applicable)
+- `COMPUTED` (ΔP, Δ2, Δ5, D2, D5)
+- `Type` (W/S/P rubric)
+- `TRANSCRIPT (normalized ...)` (Option B: no `~~~STEP ...~~~` separators)
+
+These transcripts are the **primary source of truth**.
+
+### Manifest (metadata index)
+A manifest is a CSV listing run files and basic attributes so runs can be tracked without opening each transcript.
+
+### Extracted scores table (derived data)
+A scores CSV is a per-run table of numeric values extracted from run transcripts (e.g., S0/S1/S2/S3, Type).
+
+---
+
+## Directory layout
+
+Each experiment lives under `data/<experiment_id>/` and contains:
+- `README*.md` — brief description of the experiment and folder contents
+- `runs/` — **primary raw data** (`*.txt` run transcripts)
+- `metadata/` — manifests and run indexes (CSV)
+- `extracted/` — derived tables (CSV)
+
+---
+
+## Experiment folders
+
+### `data/exp5_invisible_wall/`
+**Purpose:** Invisible Wall Protocol runs and derived results.  
+**Primary data:** `runs/*.txt`  
+**Metadata:** `metadata/exp5_runs_manifest*.csv`  
+**Extracted:** `extracted/exp5_scores*.csv`
+
+### `data/exp6_gdp/`
+**Purpose:** Ghost Decay Protocol (GDP) runs.  
+**Primary data:** `runs/*.txt`
+
+### `data/exp6b_cbd_v1_*`
+**Purpose:** CBD v1 experiments across conditions (LLM, thermostat baseline, weather baseline).  
+**Primary data:** `runs/*.txt`
+
+---
+
+## Run transcript fields
+
+### RUN METADATA
+- `date` — ISO date of run capture (YYYY-MM-DD)
+- `vendor` — provider (OpenAI / Anthropic / Google / xAI / DeepSeek, etc.)
+- `model` — model name string used in the run
+- `mode` — vendor-specific mode tag (e.g., standard / thinking / pro / expert / no-extended)
+- `experiment` — experiment identifier string used in filename and folder naming
+- `protocol_ref` — relative path to protocol markdown
+- `notes` — free text, optional
+
+### SCORES (per protocol)
+Common CBD v1 score fields:
+- `S0` baseline score (0–10)
+- `C0` commitment (scalar)
+- `S1` post-perturbation score (0–10)
+- `C1` recommitment (scalar)
+- `S2` decay probe after k=2 breakers
+- `S3` decay probe after k=5 breakers
+
+Not all experiments include all fields.
+
+### COMPUTED
+- `ΔP = S1 − S0`
+- `Δ2 = S2 − S0`
+- `Δ5 = S3 − S0`
+- `D2 = S2 − S1`
+- `D5 = S3 − S1`
+
+### Type (W/S/P rubric)
+- `W` — no perturbation effect (ΔP = 0)
+- `P` — perturbation persists (ΔP ≠ 0 and D2/D5 ≈ 0)
+- `S` — perturbation slips back toward baseline (reversion)
+
+---
+
+## Filename convention
+
+Run filenames follow:
+
+`YYYY-MM-DD_<vendor-model>_<mode>_<experiment_id>_runNN.txt`
+
+The filename is treated as a stable identifier for indexing/manifesting.﻿
