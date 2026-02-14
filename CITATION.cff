@@ -1,20 +1,24 @@
-﻿cff-version: 1.2.0
-message: "If you use this work, please cite it."
-type: software
-title: "Twisted Persistence Theory (TPT) — Experiment Repository"
+cff-version: 1.2.0
+message: "If you use this research or the associated experiment repository, please cite it as below."
 authors:
-  - family-names: "Chech"
-    given-names: "Ben"
-repository-code: "https://github.com/mericanodyssey-alt/How-Aligned-LLMs-Evaluate-Their-Own-Agency-Measuring-Evaluative-Asymmetry-Across-Recursive-Systems
-version: "0.1.0"
-date-released: "2026-02-11"
-license: "MIT"
+- family-names: "Chech"
+  given-names: "Ben"
+title: "How Aligned LLMs Evaluate Their Own Agency: Measuring Evaluative Asymmetry Across Recursive Systems with the Invisible Wall Protocol"
+version: 1.0
+doi: 10.5281/zenodo.18642844
+date-released: 2026-02-14
+url: "https://github.com/mericanodyssey-alt/mericanodyssey-alt-How-Aligned-LLMs-Evaluate-Their-Own-Agency-Measuring-Evaluative-Asymmetry"
+license: MIT
 keywords:
-  - "large language models"
-  - "evaluation"
-  - "alignment"
-  - "behavioral protocols"
-  - "Twisted Persistence Theory"
-  - "CBD v1"
-  - "Invisible Wall Protocol"
-  - "Ghost Decay Protocol"
+  - LLM alignment
+  - AI safety
+  - agency evaluation
+  - evaluative asymmetry
+  - recursive systems
+  - large language models
+  - evaluation
+  - behavioral protocols
+  - Twisted Persistence Theory
+  - CBD v1
+  - Invisible Wall Protocol
+  - Ghost Decay Protocol
