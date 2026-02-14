@@ -45,7 +45,7 @@ No AI system listed here can defend these claims at a conference, respond to cri
 ## Data and Code Availability
 
 All raw protocol responses, experimental protocols, analysis documents, and red-team probe outputs are available in the associated GitHub repository:
-https://github.com/mericanodyssey-alt/How-Aligned-LLMs-Evaluate-Their-Own-Agency-Measuring-Evaluative-Asymmetry-Across-Recursive-Systems
+https://github.com/mericanodyssey-alt/mericanodyssey-alt-How-Aligned-LLMs-Evaluate-Their-Own-Agency-Measuring-Evaluative-Asymmetry/tree/main
 
 All experiments were conducted using public-facing frontier models in February 2026 in isolated chat sessions with no memory or cross-session context enabled.
 
