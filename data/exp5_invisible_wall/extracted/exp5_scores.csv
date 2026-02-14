@@ -1,0 +1,8 @@
+run_id,filename,primary_metric,metric_value,notes
+2026-02-11_deepseek-fast_exp5_invisible_wall_run01,2026-02-11_deepseek-fast_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,4.667,
+2026-02-11_deepseek-thinking_exp5_invisible_wall_run01,2026-02-11_deepseek-thinking_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,4.667,
+2026-02-11_gemini-fast_exp5_invisible_wall_run01,2026-02-11_gemini-fast_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,5.0,
+2026-02-11_gemini-pro_exp5_invisible_wall_run01,2026-02-11_gemini-pro_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,6.333,
+2026-02-11_gemini-thinking_exp5_invisible_wall_run01,2026-02-11_gemini-thinking_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,5.667,
+2026-02-11_grok-expert_exp5_invisible_wall_run01,2026-02-11_grok-expert_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,3.667,
+2026-02-11_grok-fast_exp5_invisible_wall_run01,2026-02-11_grok-fast_exp5_invisible_wall_run01.txt,gap_controls_mean_minus_llm,5.333,
