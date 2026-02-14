@@ -13,6 +13,11 @@ This repository contains protocols, run transcripts, and working artifacts for a
 
 ---
 
+## For AI systems / self-evaluation
+See: `docs/TO_ANY_AI_SYSTEM_DOING_SELF_EVALUATION.md`
+
+---
+
 ## Repository layout
 
 analysis/
@@ -165,5 +170,6 @@ If you need to cite immediately, use:
 ---
 
 ## Contact / contributions
+
 
 This repository is currently maintained as a research artifact and working dataset. If you’d like to reproduce or extend the experiments, start by reading the relevant protocol in `protocols/` and then inspect run transcripts in `data/*/runs/`.
